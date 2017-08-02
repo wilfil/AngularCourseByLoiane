@@ -1,0 +1,27 @@
+<div class="row">
+    <h4>Criar/Editar Cadastro</h4>
+    <div class="col s6">
+        <div class="row">
+            <div class="input-field col s6">
+                <input disabled placeholder="#" id="idAluno" type="text" class="validate" [(ngModel)]="aluno.id">
+                <label for="idAluno" class="active">Id do Aluno</label>
+            </div>
+
+        </div>
+        <!-- o angular tem suporte a form pra verificar se ele mudou, mas no momento vamos fazer manualmente -->
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="nome" type="text" class="validate" [(ngModel)]="aluno.nome" (input)="onInput()">
+                <label for="nome" class="active">Nome</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="email" type="email" class="validate" [(ngModel)]="aluno.email">
+                <label for="email" class="active">Email</label>
+            </div>
+        </div>
+
+    </div>
+</div>

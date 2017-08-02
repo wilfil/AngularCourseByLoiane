@@ -1,0 +1,29 @@
+<div class="row">
+    <!-- aqui começa o grid -->
+    <div class="col s5">
+        <ul class="collection with-header">
+            <li class="collection-header">
+                <h4>Lista de Alunos</h4>
+            </li>
+            <li class="collection-item" *ngFor="let aluno of alunos" [routerLink]="[aluno.id]">
+                <div>{{aluno.nome}}<a [routerLink]="[aluno.id]" class="secondary-content "><i class="material-icons ">send</i></a></div>
+            </li>
+
+            <!-- no caso do routerlink acima, coloquei link tanto no li como no ícone :) -->
+            <!-- [routerLink]="['/alunos',aluno.id] como já estou dentro de alunos e estou usando rotas filhores, não
+            preciso colocar o caminho completo -->
+
+        </ul>
+    </div>
+    <!--
+    <div class="col s1">
+
+    </div>
+
+-->
+
+    <div class="row s6">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>
